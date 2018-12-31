@@ -19,7 +19,7 @@ module counter_en #(
     .o_y(w_cnt_1)
   );
 
-  assign w_cnt_0 = w_cnt_1 + 1;
+  assign w_cnt_0 = w_cnt_1 + 1'b1;
   assign o_cnt = w_cnt_1;
 endmodule
 
