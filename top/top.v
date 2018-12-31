@@ -8,7 +8,7 @@ module top (
 
   wire w_en;
 
-  parameter CYCLE_BIT_SIZE = 7
+  parameter CYCLE_BIT_SIZE = 7;
   enable_gen #(CYCLE_BIT_SIZE) enable_gen0(
     .clk(clk),
     .i_sclr(i_sclr),
