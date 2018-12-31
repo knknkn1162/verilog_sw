@@ -1,14 +1,15 @@
 `include "testbench.v"
-`include "bflopr.v"
+`include "bflopr_en.v"
 
 module bflopr_tb;
-  reg clk, i_sclr, i_a;
+  reg clk, i_sclr, i_a, i_en;
   wire o_y;
 
   parameter CLK_PERIOD = 10;
-  bflopr uut(
+  bflopr_en uut(
     .clk(clk),
     .i_sclr(i_sclr),
+    .i_en(i_en),
     .i_a(i_a),
     .o_y(o_y)
   );
@@ -21,6 +22,7 @@ module bflopr_tb;
       i_sclr = 1'b1;
     @(posedge clk) #1
       i_sclr = 1'b0;
+      i_en = 1'b1;
       `assert_eq(o_y, 1'b0);
       i_a = 1'b1;
     @(posedge clk) #1
