@@ -1,0 +1,9 @@
+*
+!Makefile
+!*.*
+*.qws
+*.qpf
+*.o
+*.vcd
+!*/*
+!include
