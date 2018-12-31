@@ -1,3 +1,6 @@
+`ifndef _enable_gen
+`define _enable_gen
+
 `include "counter_en.v"
 
 module enable_gen #(
@@ -17,3 +20,5 @@ module enable_gen #(
 
   assign o_en = (w_cnt == {BIT_SIZE{1'b1}}) ? 1'b1 : 1'b0;
 endmodule
+
+`endif

@@ -1,3 +1,6 @@
+`ifndef _toggle
+`define _toggle
+
 module toggle (
   input wire clk, i_sclr, i_en,
   output wire o_sw
@@ -15,3 +18,5 @@ module toggle (
 
   assign o_sw = r_sw;
 endmodule
+
+`endif

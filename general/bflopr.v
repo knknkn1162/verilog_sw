@@ -1,3 +1,6 @@
+`ifndef _bflopr
+`define _bflopr
+
 module bflopr (
   input wire clk, i_sclr,
   input wire i_a,
@@ -12,3 +15,5 @@ module bflopr (
   end
 
 endmodule
+
+`endif

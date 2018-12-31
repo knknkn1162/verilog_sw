@@ -1,3 +1,6 @@
+`ifndef _flopr_en
+`define _flopr_en
+
 module flopr_en #(
   parameter WIDTH = 32
 ) (
@@ -14,3 +17,5 @@ module flopr_en #(
   end
 
 endmodule
+
+`endif

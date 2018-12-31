@@ -1,3 +1,6 @@
+`ifndef _counter_en
+`define _counter_en
+
 `include "flopr_en.v"
 
 module counter_en #(
@@ -20,3 +23,5 @@ module counter_en #(
   assign w_cnt_0 = (w_cnt_1 == ULIMIT) ? 0 : w_cnt_1 + 1;
   assign o_cnt = w_cnt_1;
 endmodule
+
+`endif

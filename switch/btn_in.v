@@ -1,3 +1,6 @@
+`ifndef _btn_in
+`define _btn_in
+
 `include "enable_gen.v"
 `include "bflopr.v"
 
@@ -40,3 +43,5 @@ module btn_in (
     .o_y(o_bout)
   );
 endmodule
+
+`endif
