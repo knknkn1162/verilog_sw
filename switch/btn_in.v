@@ -2,7 +2,7 @@
 `define _btn_in
 
 `include "enable_gen.v"
-`include "bflopr.v"
+`include "bflopr_en.v"
 
 module btn_in #(
   parameter BIT_SIZE = 20
@@ -22,25 +22,28 @@ module btn_in #(
     .o_en(w_en)
   );
 
-  bflopr bflopr0(
-    .clk(w_en),
+  bflopr_en bflopr_en0(
+    .clk(clk),
     .i_sclr(i_sclr),
+    .i_en(w_en),
     .i_a(i_bin),
     .o_y(w_bin1)
   );
 
-  bflopr bflopr1(
-    .clk(w_en),
+  bflopr_en bflopr_en1(
+    .clk(clk),
     .i_sclr(i_sclr),
+    .i_en(w_en),
     .i_a(w_bin1),
     .o_y(w_bin2)
   );
 
   assign w_bout = ~w_bin1 & w_bin2 & w_en;
 
-  bflopr bflopr2(
-    .clk(w_en),
+  bflopr_en bflopr_en2(
+    .clk(clk),
     .i_sclr(i_sclr),
+    .i_en(w_en),
     .i_a(w_bout),
     .o_y(o_bout)
   );
