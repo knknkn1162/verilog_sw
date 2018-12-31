@@ -41,6 +41,7 @@ module btn_in #(
 
   assign w_bout = ~w_bin1 & w_bin2 & w_en;
 
+  // prevent hazard
   bflopr bflopr0(
     .clk(clk),
     .i_sclr(i_sclr),
