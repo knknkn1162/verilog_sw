@@ -8,7 +8,6 @@ module switch (
 );
 
   wire w_en;
-  wire w_sw_en;
 
   btn_in btn_in0(
     .clk(clk),
