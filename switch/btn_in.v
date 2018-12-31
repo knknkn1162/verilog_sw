@@ -39,5 +39,4 @@ module btn_in (
     .i_a(w_bout),
     .o_y(o_bout)
   );
-
 endmodule

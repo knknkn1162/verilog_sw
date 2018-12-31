@@ -1,17 +1,26 @@
+`include "btn_in.v"
+`include "toggle.v"
+
 module switch (
-  input wire clk, i_sclr, i_en,
-  output wire o_sw
+  input wire clk, i_sclr,
+  input wire i_btn,
+  output wire o_ledr
 );
 
-  reg r_sw;
+  wire w_en;
+  wire w_sw_en;
 
-  always @(posedge clk) begin
-    if (i_sclr) begin
-      r_sw <= 1'b0;
-    end else if (i_en) begin
-      r_sw <= ~r_sw;
-    end
-  end
+  btn_in btn_in0(
+    .clk(clk),
+    .i_sclr(i_sclr),
+    .i_bin(i_bin),
+    .o_bout(w_en)
+  );
 
-  assign o_sw = r_sw;
+  toggle toggle0(
+    .clk(clk),
+    .i_sclr(i_sclr),
+    .i_en(w_en),
+    .o_sw(o_ledr)
+  );
 endmodule

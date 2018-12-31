@@ -1,8 +1,9 @@
 FILES=\
-	switch_tb \
 	counter_en_tb \
 	enable_gen_tb \
-	btn_in
+	btn_in \
+	toggle_tb \
+	switch
 
 INCLUDES=\
 	include \
