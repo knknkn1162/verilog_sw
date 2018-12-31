@@ -12,5 +12,8 @@ all: $(FILES) clean
 %.o: %.v
 	$(VC) ${OPTION} -o $@ $<
 
+open:
+	open out.vcd
+
 clean:
 	rm -rf *.o *.vcd
