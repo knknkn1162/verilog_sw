@@ -11,7 +11,7 @@ module enable_gen #(
 );
 
   wire [BIT_SIZE-1:0] w_cnt;
-  counter_en #(BIT_SIZE) uut(
+  counter_en #(BIT_SIZE) counter_en0(
     .clk(clk),
     .i_sclr(i_sclr),
     .i_en(1'b1),
