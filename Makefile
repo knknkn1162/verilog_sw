@@ -1,5 +1,5 @@
 include template.mk
-SUBDIRS=general switch display
+SUBDIRS=general switch display top
 
 .SUFFIX:
 .PHONY: all clean open
