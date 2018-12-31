@@ -3,7 +3,6 @@
 
 module counter_en_tb;
   parameter WIDTH = 3;
-  parameter ULIMIT = 3'b110;
   reg clk, i_sclr, i_en;
   wire [WIDTH-1:0] o_cnt;
 
