@@ -1,5 +1,5 @@
-`ifndef _bflopr
-`define _bflopr
+`ifndef _bflopr_en
+`define _bflopr_en
 
 module bflopr_en (
   input wire clk, i_sclr, i_en,

@@ -3,6 +3,7 @@
 
 `include "enable_gen.v"
 `include "bflopr_en.v"
+`include "bflopr.v"
 
 module btn_in #(
   parameter BIT_SIZE = 20
@@ -40,10 +41,9 @@ module btn_in #(
 
   assign w_bout = ~w_bin1 & w_bin2 & w_en;
 
-  bflopr_en bflopr_en2(
+  bflopr bflopr0(
     .clk(clk),
     .i_sclr(i_sclr),
-    .i_en(w_en),
     .i_a(w_bout),
     .o_y(o_bout)
   );
