@@ -4,14 +4,16 @@
 `include "enable_gen.v"
 `include "bflopr.v"
 
-module btn_in (
+module btn_in #(
+  parameter BIT_SIZE = 20
+) (
   input wire clk, i_sclr,
   input wire i_bin,
   output wire o_bout
 );
-  parameter BIT_SIZE = 20;
 
-  wire w_bin1, wbin2;
+  wire w_en;
+  wire w_bin1, w_bin2;
   wire w_bout;
 
   enable_gen #(BIT_SIZE) enable_gen0(

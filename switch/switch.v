@@ -6,13 +6,13 @@ module switch (
   input wire i_btn,
   output wire o_ledr
 );
-
+  parameter BIT_SIZE = 20;
   wire w_en;
 
-  btn_in btn_in0(
+  btn_in #(BIT_SIZE) btn_in0(
     .clk(clk),
     .i_sclr(i_sclr),
-    .i_bin(i_bin),
+    .i_bin(i_btn),
     .o_bout(w_en)
   );
 

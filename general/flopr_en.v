@@ -15,7 +15,6 @@ module flopr_en #(
       o_y <= i_a;
     end
   end
-
 endmodule
 
 `endif
