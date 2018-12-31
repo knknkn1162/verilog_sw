@@ -4,8 +4,7 @@
 `include "flopr_en.v"
 
 module counter_en #(
-  parameter WIDTH = 4,
-  parameter [WIDTH-1:0] ULIMIT = {WIDTH{1'b1}}
+  parameter WIDTH = 4
 ) (
   input wire clk, i_sclr, i_en,
   output wire [WIDTH-1:0] o_cnt
@@ -20,7 +19,7 @@ module counter_en #(
     .o_y(w_cnt_1)
   );
 
-  assign w_cnt_0 = (w_cnt_1 == ULIMIT) ? 0 : w_cnt_1 + 1;
+  assign w_cnt_0 = w_cnt_1 + 1;
   assign o_cnt = w_cnt_1;
 endmodule
 

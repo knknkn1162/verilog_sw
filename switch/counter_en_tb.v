@@ -41,6 +41,8 @@ module counter_en_tb;
     @(posedge clk) #1
       `assert_eq(o_cnt, 3'b110);
     @(posedge clk) #1
+      `assert_eq(o_cnt, 3'b111);
+    @(posedge clk) #1
       `assert_eq(o_cnt, 3'b000);
     @(posedge clk) #1
       `assert_eq(o_cnt, 3'b001);
